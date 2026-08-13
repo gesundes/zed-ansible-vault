@@ -1,0 +1,6 @@
+/target/
+extension.wasm
+/.zed/
+*.swp
+*.tmp
+.DS_Store

@@ -1,0 +1,16 @@
+id = "ansible-vault"
+name = "Ansible Vault"
+version = "0.2.0"
+schema_version = 1
+authors = ["Oleg Lipin"]
+description = "Encrypt and decrypt Ansible Vault files and inline !vault YAML values"
+repository = "https://github.com/gesundes/zed-ansible-vault"
+
+[language_servers.ansible-vault-lsp]
+name = "Ansible Vault LSP"
+languages = ["Ansible", "YAML"]
+
+[[capabilities]]
+kind = "download_file"
+host = "github.com"
+path = ["gesundes", "zed-ansible-vault", "releases", "download", "**"]

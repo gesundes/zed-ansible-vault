@@ -1,0 +1,47 @@
+name: Bug report
+description: Report incorrect Ansible Vault extension behavior
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include Vault passwords, password-file contents, decrypted secrets, or private ciphertext.
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      placeholder: 0.2.0
+    validations:
+      required: true
+  - type: input
+    id: zed
+    attributes:
+      label: Zed and operating system versions
+      description: Use `zed: copy system specs into clipboard`, then remove unrelated identifying details.
+    validations:
+      required: true
+  - type: input
+    id: ansible
+    attributes:
+      label: ansible-vault version
+      placeholder: ansible-vault [core 2.21.x]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use synthetic data only.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized Zed log excerpt
+      description: Remove paths, usernames, Vault payloads, plaintext, and passwords before submitting.
