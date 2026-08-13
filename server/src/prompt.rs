@@ -162,6 +162,7 @@ impl PromptBackend {
     }
 }
 
+#[cfg(any(target_os = "macos", test))]
 fn apple_script_escape(value: &str) -> String {
     value.replace('\\', "\\\\").replace('"', "\\\"")
 }
