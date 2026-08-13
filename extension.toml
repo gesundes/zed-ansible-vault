@@ -1,6 +1,6 @@
 id = "ansible-vault"
 name = "Ansible Vault"
-version = "0.2.0"
+version = "0.2.1"
 schema_version = 1
 authors = ["Oleg Lipin"]
 description = "Encrypt and decrypt Ansible Vault files and inline !vault YAML values"

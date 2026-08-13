@@ -34,7 +34,7 @@ jobs:
             platform: macos
             architecture: x86_64
             deployment_target: 10.15.7
-            expected_minos: "10.15"
+            expected_minos: "10.15.7"
           - runner: macos-15
             target: aarch64-apple-darwin
             asset: ansible-vault-lsp-darwin-aarch64
@@ -89,7 +89,8 @@ jobs:
         if: matrix.platform == 'macos'
         run: |
           file "${{ matrix.asset }}" | grep -qi "${{ matrix.architecture }}"
-          otool -l "${{ matrix.asset }}" | grep -A 3 LC_BUILD_VERSION | grep -q "minos ${{ matrix.expected_minos }}"
+          otool -l "${{ matrix.asset }}" | \
+            ./scripts/verify-macos-deployment-target.sh "${{ matrix.expected_minos }}"
       - name: Upload native asset
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:

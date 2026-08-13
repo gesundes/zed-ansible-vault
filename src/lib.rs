@@ -255,10 +255,10 @@ mod tests {
 
     #[test]
     fn release_is_pinned_to_extension_version() {
-        assert_eq!(AnsibleVaultExtension::release_tag(), "v0.2.0");
-        assert!(AnsibleVaultExtension::release_version_matches("v0.2.0"));
-        assert!(AnsibleVaultExtension::release_version_matches("0.2.0"));
-        assert!(!AnsibleVaultExtension::release_version_matches("v0.2.1"));
+        assert_eq!(AnsibleVaultExtension::release_tag(), "v0.2.1");
+        assert!(AnsibleVaultExtension::release_version_matches("v0.2.1"));
+        assert!(AnsibleVaultExtension::release_version_matches("0.2.1"));
+        assert!(!AnsibleVaultExtension::release_version_matches("v0.2.0"));
     }
 
     #[test]
@@ -299,8 +299,8 @@ mod tests {
     #[test]
     fn staging_directory_does_not_drop_the_patch_version() {
         assert_eq!(
-            AnsibleVaultExtension::staging_path(Path::new("ansible-vault-lsp-0.2.0")),
-            Path::new("ansible-vault-lsp-0.2.0.staging")
+            AnsibleVaultExtension::staging_path(Path::new("ansible-vault-lsp-0.2.1")),
+            Path::new("ansible-vault-lsp-0.2.1.staging")
         );
     }
 
@@ -325,7 +325,7 @@ mod tests {
     #[test]
     fn interrupted_staging_download_is_removed_before_retry() {
         let directory = tempfile::tempdir().expect("temp dir");
-        let install = directory.path().join("ansible-vault-lsp-0.2.0");
+        let install = directory.path().join("ansible-vault-lsp-0.2.1");
         let staging = AnsibleVaultExtension::staging_path(&install);
         fs::create_dir_all(&staging).expect("staging directory");
         fs::write(staging.join(SERVER_NAME), b"partial").expect("partial download");

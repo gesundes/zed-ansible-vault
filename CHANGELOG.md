@@ -5,6 +5,14 @@ remains below `1.0.0`.
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-08-13
+
+### Fixed
+
+- Accept both modern `LC_BUILD_VERSION` and legacy `LC_VERSION_MIN_MACOSX` metadata when verifying
+  the Intel macOS 10.15.7 deployment target. The unpublished `v0.2.0` workflow was stopped before
+  creating a GitHub Release or uploading release assets.
+
 ## [0.2.0] - 2026-08-13
 
 ### Added
@@ -29,5 +37,6 @@ remains below `1.0.0`.
 - Windows, headless interactive prompts, automatic decrypt-on-open, and password caching remain out
   of scope.
 
-[Unreleased]: https://github.com/gesundes/zed-ansible-vault/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/gesundes/zed-ansible-vault/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/gesundes/zed-ansible-vault/releases/tag/v0.2.1
 [0.2.0]: https://github.com/gesundes/zed-ansible-vault/releases/tag/v0.2.0
