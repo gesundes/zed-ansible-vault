@@ -292,6 +292,7 @@ mod tests {
         script
             .set_permissions(fs::Permissions::from_mode(0o700))
             .expect("executable permissions");
+        drop(script);
         let password = directory.path().join("password");
         fs::write(&password, "secret\n").expect("password file");
         fs::set_permissions(&password, fs::Permissions::from_mode(0o600))
