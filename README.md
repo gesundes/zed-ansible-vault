@@ -11,7 +11,7 @@ operations and diagnostics; it does not replace Ansible syntax highlighting or i
 
 After the catalog release, open Zed Extensions, search for **Ansible Vault**, and select **Install**.
 The extension downloads the native companion matching its own version and verifies its SHA-256
-checksum before making it executable. Companion `0.2.0` is downloaded only from release `v0.2.0`.
+checksum before making it executable. Companion `0.2.1` is downloaded only from release `v0.2.1`.
 
 For development, open the command palette, run **Extensions: Install Dev Extension**, and select
 this repository. A development install can use a locally built companion as described below.
@@ -81,7 +81,7 @@ diagnostics through `editor: toggle inline diagnostics` or settings:
 ## Requirements
 
 - Zed with support for third-party language-server extensions.
-- `ansible-vault` from a maintained `ansible-core` release installed on the host. Release `0.2.0`
+- `ansible-vault` from a maintained `ansible-core` release installed on the host. Release `0.2.1`
   is tested with `ansible-core` 2.19, 2.20, and 2.21.
 - If no password file is configured:
   - macOS: `/usr/bin/osascript`;
@@ -94,7 +94,7 @@ The extension never bundles Ansible or a dialog tool.
 | macOS 10.15.7 or newer | Intel `x86_64` | Supported |
 | macOS 11 or newer | Apple Silicon `aarch64` | Supported |
 | Linux supported by Zed | `x86_64`, `aarch64` | Supported with static companion binaries |
-| Windows | — | Not supported in 0.2.0 |
+| Windows | — | Not supported in 0.2.1 |
 
 Interactive prompts require a graphical desktop session. Headless and remote environments must use
 `ansibleVault.passwordFile`.

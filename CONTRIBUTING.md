@@ -42,7 +42,7 @@ not a local binary override, before opening the catalog PR.
 
 1. Update `CHANGELOG.md` and bump the workspace and `extension.toml` versions together.
 2. Run all local and CI checks. Merge the release commit to `main`.
-3. Create and push an annotated tag such as `v0.2.0`. The tag must point to a commit reachable from
+3. Create and push an annotated tag such as `v0.2.1`. The tag must point to a commit reachable from
    `main`.
 4. Approve the protected `release` GitHub environment after all four native builds pass.
 5. Verify the GitHub Release contains four binaries, adjacent checksums, `SHA256SUMS`, the CycloneDX
@@ -54,7 +54,7 @@ not a local binary override, before opening the catalog PR.
    ```toml
    [ansible-vault]
    submodule = "extensions/ansible-vault"
-   version = "0.2.0"
+   version = "0.2.1"
    ```
 
 8. Run `pnpm sort-extensions` and `pnpm package-extensions ansible-vault`, then open the catalog PR.

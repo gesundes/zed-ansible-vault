@@ -35,6 +35,8 @@ jobs:
         uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2
       - name: Check release version contract
         run: ./scripts/check-release-version.sh
+      - name: Test macOS deployment metadata verifier
+        run: ./scripts/test-macos-deployment-target.sh
       - name: Check formatting
         run: cargo fmt --all --check
       - name: Lint
