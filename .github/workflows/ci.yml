@@ -32,7 +32,7 @@ jobs:
           components: rustfmt, clippy
           targets: wasm32-wasip2
       - name: Cache Cargo
-        uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2
+        uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2
       - name: Check release version contract
         run: ./scripts/check-release-version.sh
       - name: Test macOS deployment metadata verifier
@@ -66,7 +66,7 @@ jobs:
         with:
           toolchain: ${{ env.RUST_VERSION }}
       - name: Cache Cargo
-        uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2
+        uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2
         with:
           key: ansible-${{ matrix.ansible-core }}
       - name: Install ansible-core
